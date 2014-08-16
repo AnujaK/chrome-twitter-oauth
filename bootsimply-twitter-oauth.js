@@ -20,14 +20,16 @@ var BootSimply = (function () {
 		  var credentials = 'M5xvP4FU5E9LXl2HIOGn6AQEl:PxL6BhSy5CjxVIK1OKbeZh5bkv8pUpLP3zxnALbQqBkXhuYV8T';
 		  var encodedCredentials = btoa(credentials);
       
-      var url = 'https://api.twitter.com/oauth2/token';
-      var type = 'post';
-      
+          var url = 'https://api.twitter.com/oauth2/token';
+          var type = 'post';
+          var data = 'grant_type=client_credentials';
+          var contentType = 'application/x-www-form-urlencoded;charset=UTF-8';
+            
 			$.ajax({
 				url: url,
 				type: type,
-				data: 'grant_type=client_credentials',
-				contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+				data: data,
+				contentType: contentType,
 				headers: {
 					'Authorization': 'Basic ' + encodedCredentials
 				},
@@ -40,10 +42,11 @@ var BootSimply = (function () {
 		}
 
 		function processResponse(response) {
-      document.querySelector('#token_response').innerText = JSON.stringify(response);
+            document.querySelector('#token_response').innerText = JSON.stringify(response);
 		}
 		
 	}
+    
 	BootSimply.prototype.oauthFlow = function () {
 		makeApiCall();
 		return "";
