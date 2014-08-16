@@ -1,7 +1,7 @@
 chrome-twitter-oauth
 ==========
 
-**chrome-twitter-oauth** demonstrates **OAuth2** flow supported by Twitter inside a Chrome application. Twitter OAuth2 supports Application-only authentication. This means authenticated requests are made on behalf of the application as opposed to on behalf of a specific user. 
+**chrome-twitter-oauth** demonstrates how to call Twitter APIs inside a Chrome application using **OAuth2**. Twitter OAuth2 supports Application-only authentication. This means authenticated requests are made on behalf of the application as opposed to on behalf of a specific user. 
 
 Here is how we have implemented the auth flow:
 
